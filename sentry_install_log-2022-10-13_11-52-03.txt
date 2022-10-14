@@ -1,0 +1,173 @@
+▶ Parsing command line ...
+
+▶ Detecting Docker platform
+Detected Docker platform is linux/arm64
+
+▶ Initializing Docker Compose ...
+
+▶ Setting up error handling ...
+
+Hey, so ... we would love to automatically find out about issues with your
+Sentry instance so that we can improve the product. Turns out there is an app
+for that, called Sentry. Would you be willing to let us automatically send data
+about your instance upstream to Sentry for development and debugging purposes?
+
+  y / yes / 1
+  n / no / 0
+
+(Btw, we send this to our own self-hosted Sentry instance, not to Sentry SaaS,
+so that we can be in this together.)
+
+Here's the info we may collect:
+
+  - OS username
+  - IP address
+  - install log
+  - runtime errors
+  - performance data
+
+Thirty (30) day retention. No marketing. Privacy policy at sentry.io/privacy.
+
+y or n? 
+Thank you. To avoid this prompt in the future, use one of these flags:
+
+  --report-self-hosted-issues
+  --no-report-self-hosted-issues
+
+or set the REPORT_SELF_HOSTED_ISSUES environment variable:
+
+  REPORT_SELF_HOSTED_ISSUES=1 to send data
+  REPORT_SELF_HOSTED_ISSUES=0 to not send data
+
+latest: Pulling from getsentry/sentry-cli
+Digest: sha256:14d7c32d9070ea2536e926893fceafbbf9bafedcccdb1650056d096712891507
+Status: Image is up to date for getsentry/sentry-cli:latest
+docker.io/getsentry/sentry-cli:latest
+
+▶ Checking for latest commit ... 
+skipped
+
+▶ Checking minimum requirements ...
+Found Docker version 20.10.17
+Found Docker Compose version 2.7.0
+
+▶ Turning things off ...
+Container sentry-self-hosted-redis-1  Stopping
+Container sentry-self-hosted-redis-1  Stopping
+Container sentry-self-hosted-redis-1  Stopping
+Container sentry-self-hosted-kafka-1  Stopping
+Container sentry-self-hosted-redis-1  Stopping
+Container sentry-self-hosted-clickhouse-1  Stopping
+Container sentry-self-hosted-clickhouse-1  Stopping
+Container sentry-self-hosted-kafka-1  Stopping
+Container sentry-self-hosted-kafka-1  Stopping
+Container sentry-self-hosted-kafka-1  Stopping
+Container sentry-self-hosted-clickhouse-1  Stopping
+Container sentry-self-hosted-clickhouse-1  Stopping
+Container sentry-self-hosted-kafka-1  Stopping
+Container sentry-self-hosted-clickhouse-1  Stopping
+Container sentry-self-hosted-clickhouse-1  Stopping
+Container sentry-self-hosted-clickhouse-1  Stopping
+Container sentry-self-hosted-kafka-1  Stopping
+Container sentry-self-hosted-clickhouse-1  Stopping
+Container sentry-self-hosted-kafka-1  Stopping
+Container sentry-self-hosted-kafka-1  Stopping
+Container sentry-self-hosted-kafka-1  Stopping
+Container sentry-self-hosted-redis-1  Stopping
+Container sentry-self-hosted-redis-1  Stopping
+Container sentry-self-hosted-kafka-1  Stopping
+Container sentry-self-hosted-kafka-1  Stopping
+Container sentry-self-hosted-kafka-1  Stopping
+Container sentry-self-hosted-redis-1  Stopping
+Container sentry-self-hosted-redis-1  Stopping
+Container sentry-self-hosted-redis-1  Stopping
+Container sentry-self-hosted-clickhouse-1  Stopping
+Container sentry-self-hosted-redis-1  Stopping
+Container sentry-self-hosted-clickhouse-1  Stopping
+Container sentry-self-hosted-clickhouse-1  Stopping
+Container sentry-self-hosted-clickhouse-1  Stopping
+Container sentry-self-hosted-redis-1  Stopping
+Container sentry-self-hosted-redis-1  Stopping
+Container sentry-self-hosted-clickhouse-1  Stopping
+Container sentry-self-hosted-clickhouse-1  Stopping
+Container sentry-self-hosted-redis-1  Stopping
+Container sentry-self-hosted-redis-1  Stopping
+Container sentry-self-hosted-kafka-1  Stopping
+Container sentry-self-hosted-kafka-1  Stopping
+Container sentry-self-hosted-clickhouse-1  Stopped
+Container sentry-self-hosted-clickhouse-1  Removing
+Container sentry-self-hosted-kafka-1  Stopped
+Container sentry-self-hosted-kafka-1  Removing
+Container sentry-self-hosted-redis-1  Stopped
+Container sentry-self-hosted-redis-1  Removing
+Container sentry-self-hosted-redis-1  Stopped
+Container sentry-self-hosted-redis-1  Removing
+Container sentry-self-hosted-kafka-1  Stopped
+Container sentry-self-hosted-kafka-1  Removing
+Container sentry-self-hosted-redis-1  Stopped
+Container sentry-self-hosted-redis-1  Removing
+Container sentry-self-hosted-clickhouse-1  Stopped
+Container sentry-self-hosted-clickhouse-1  Removing
+Container sentry-self-hosted-kafka-1  Stopped
+Container sentry-self-hosted-kafka-1  Removing
+Container sentry-self-hosted-kafka-1  Stopped
+Container sentry-self-hosted-kafka-1  Removing
+Container sentry-self-hosted-clickhouse-1  Stopped
+Container sentry-self-hosted-clickhouse-1  Removing
+Container sentry-self-hosted-redis-1  Stopped
+Container sentry-self-hosted-redis-1  Removing
+Container sentry-self-hosted-kafka-1  Stopped
+Container sentry-self-hosted-kafka-1  Removing
+Container sentry-self-hosted-clickhouse-1  Stopped
+Container sentry-self-hosted-clickhouse-1  Removing
+Container sentry-self-hosted-redis-1  Stopped
+Container sentry-self-hosted-redis-1  Removing
+Container sentry-self-hosted-clickhouse-1  Stopped
+Container sentry-self-hosted-clickhouse-1  Removing
+Container sentry-self-hosted-redis-1  Stopped
+Container sentry-self-hosted-redis-1  Removing
+Container sentry-self-hosted-redis-1  Stopped
+Container sentry-self-hosted-redis-1  Removing
+Container sentry-self-hosted-kafka-1  Stopped
+Container sentry-self-hosted-kafka-1  Removing
+Container sentry-self-hosted-clickhouse-1  Stopped
+Container sentry-self-hosted-clickhouse-1  Removing
+Container sentry-self-hosted-clickhouse-1  Stopped
+Container sentry-self-hosted-clickhouse-1  Removing
+Container sentry-self-hosted-kafka-1  Stopped
+Container sentry-self-hosted-kafka-1  Removing
+Container sentry-self-hosted-redis-1  Error while Removing
+Container sentry-self-hosted-clickhouse-1  Removed
+Container sentry-self-hosted-kafka-1  Removed
+Container sentry-self-hosted-zookeeper-1  Stopping
+Container sentry-self-hosted-zookeeper-1  Stopping
+Container sentry-self-hosted-redis-1  Removed
+Container sentry-self-hosted-redis-1  Error while Removing
+Container sentry-self-hosted-kafka-1  Error while Removing
+Container sentry-self-hosted-clickhouse-1  Error while Removing
+Container sentry-self-hosted-clickhouse-1  Error while Removing
+Container sentry-self-hosted-kafka-1  Error while Removing
+Container sentry-self-hosted-kafka-1  Error while Removing
+Container sentry-self-hosted-redis-1  Error while Removing
+Container sentry-self-hosted-kafka-1  Error while Removing
+Container sentry-self-hosted-clickhouse-1  Error while Removing
+Container sentry-self-hosted-redis-1  Error while Removing
+Container sentry-self-hosted-clickhouse-1  Error while Removing
+Container sentry-self-hosted-redis-1  Error while Removing
+Container sentry-self-hosted-redis-1  Error while Removing
+Container sentry-self-hosted-kafka-1  Error while Removing
+Container sentry-self-hosted-clickhouse-1  Error while Removing
+Container sentry-self-hosted-clickhouse-1  Error while Removing
+Container sentry-self-hosted-kafka-1  Error while Removing
+Container sentry-self-hosted-zookeeper-1  Stopped
+Container sentry-self-hosted-zookeeper-1  Removing
+Container sentry-self-hosted-zookeeper-1  Removed
+Error response from daemon: removal of container e678ce3cd53aa63bcfd4d61cac04955f474ced06317d70b36c062f70cc5f052a is already in progress
+Error in turn-things-off.sh:13.
+'$dc down -t $STOP_TIMEOUT --rmi local --remove-orphans' exited with status 1
+-> ./install.sh:main:23
+--> turn-things-off.sh:source:13
+
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+Event dispatched: ccb203a2-edd5-4c4b-b377-fdab8ecc4f3b
+Cleaning up...

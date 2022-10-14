@@ -1,0 +1,984 @@
+▶ Parsing command line ...
+
+▶ Detecting Docker platform
+Detected Docker platform is linux/arm64
+
+▶ Initializing Docker Compose ...
+
+▶ Setting up error handling ...
+
+Hey, so ... we would love to automatically find out about issues with your
+Sentry instance so that we can improve the product. Turns out there is an app
+for that, called Sentry. Would you be willing to let us automatically send data
+about your instance upstream to Sentry for development and debugging purposes?
+
+  y / yes / 1
+  n / no / 0
+
+(Btw, we send this to our own self-hosted Sentry instance, not to Sentry SaaS,
+so that we can be in this together.)
+
+Here's the info we may collect:
+
+  - OS username
+  - IP address
+  - install log
+  - runtime errors
+  - performance data
+
+Thirty (30) day retention. No marketing. Privacy policy at sentry.io/privacy.
+
+y or n? 
+Thank you. To avoid this prompt in the future, use one of these flags:
+
+  --report-self-hosted-issues
+  --no-report-self-hosted-issues
+
+or set the REPORT_SELF_HOSTED_ISSUES environment variable:
+
+  REPORT_SELF_HOSTED_ISSUES=1 to send data
+  REPORT_SELF_HOSTED_ISSUES=0 to not send data
+
+latest: Pulling from getsentry/sentry-cli
+c7ed990a2339: Pulling fs layer
+18d3cc651798: Pulling fs layer
+3e6a010ae3c1: Pulling fs layer
+4e81a4699a2d: Pulling fs layer
+c4969232f787: Pulling fs layer
+c4969232f787: Waiting
+4e81a4699a2d: Waiting
+18d3cc651798: Verifying Checksum
+18d3cc651798: Download complete
+3e6a010ae3c1: Verifying Checksum
+3e6a010ae3c1: Download complete
+c7ed990a2339: Download complete
+4e81a4699a2d: Verifying Checksum
+4e81a4699a2d: Download complete
+c7ed990a2339: Pull complete
+18d3cc651798: Pull complete
+3e6a010ae3c1: Pull complete
+4e81a4699a2d: Pull complete
+c4969232f787: Verifying Checksum
+c4969232f787: Download complete
+c4969232f787: Pull complete
+Digest: sha256:14d7c32d9070ea2536e926893fceafbbf9bafedcccdb1650056d096712891507
+Status: Downloaded newer image for getsentry/sentry-cli:latest
+docker.io/getsentry/sentry-cli:latest
+
+▶ Checking for latest commit ... 
+skipped
+
+▶ Checking minimum requirements ...
+Found Docker version 20.10.17
+Found Docker Compose version 2.7.0
+Unable to find image 'busybox:latest' locally
+latest: Pulling from library/busybox
+89485c9dae0b: Pulling fs layer
+89485c9dae0b: Verifying Checksum
+89485c9dae0b: Download complete
+89485c9dae0b: Pull complete
+Digest: sha256:9810966b5f712084ea05bf28fc8ba2c8fb110baa2531a10e2da52c1efc504698
+Status: Downloaded newer image for busybox:latest
+
+▶ Turning things off ...
+
+▶ Creating volumes for persistent storage ...
+Created sentry-clickhouse.
+Created sentry-data.
+Created sentry-kafka.
+Created sentry-postgres.
+Created sentry-redis.
+Created sentry-symbolicator.
+Created sentry-zookeeper.
+
+▶ Ensuring files from examples ...
+Creating ../sentry/sentry.conf.py...
+Creating ../sentry/config.yml...
+Creating ../symbolicator/config.yml...
+
+▶ Ensuring Relay credentials ...
+Creating ../relay/config.yml...
+relay Pulling 
+4b7b4a8876e2 Pulling fs layer 
+8b8dacd31de1 Pulling fs layer 
+d825f869a5d7 Pulling fs layer 
+e57eb14ee1e4 Pulling fs layer 
+84d5111c3c49 Pulling fs layer 
+092b78b8c46b Pulling fs layer 
+0484e681c5a3 Pulling fs layer 
+e57eb14ee1e4 Waiting 
+84d5111c3c49 Waiting 
+092b78b8c46b Waiting 
+0484e681c5a3 Waiting 
+8b8dacd31de1 Downloading [>                                                  ]  52.62kB/5.133MB
+4b7b4a8876e2 Downloading [>                                                  ]  278.5kB/27.13MB
+d825f869a5d7 Downloading [========>                                          ]     771B/4.601kB
+d825f869a5d7 Downloading [==================================================>]  4.601kB/4.601kB
+d825f869a5d7 Verifying Checksum 
+d825f869a5d7 Download complete 
+8b8dacd31de1 Downloading [===>                                               ]  334.2kB/5.133MB
+4b7b4a8876e2 Downloading [=>                                                 ]  564.6kB/27.13MB
+8b8dacd31de1 Downloading [======>                                            ]  661.9kB/5.133MB
+8b8dacd31de1 Downloading [===============>                                   ]  1.575MB/5.133MB
+4b7b4a8876e2 Downloading [==>                                                ]  1.129MB/27.13MB
+8b8dacd31de1 Downloading [=====================>                             ]  2.222MB/5.133MB
+8b8dacd31de1 Downloading [===============================>                   ]  3.206MB/5.133MB
+4b7b4a8876e2 Downloading [===>                                               ]  1.686MB/27.13MB
+8b8dacd31de1 Downloading [=====================================>             ]  3.849MB/5.133MB
+4b7b4a8876e2 Downloading [===>                                               ]  1.964MB/27.13MB
+8b8dacd31de1 Downloading [===========================================>       ]  4.504MB/5.133MB
+8b8dacd31de1 Verifying Checksum 
+8b8dacd31de1 Download complete 
+4b7b4a8876e2 Downloading [====>                                              ]  2.521MB/27.13MB
+e57eb14ee1e4 Downloading [==================================================>]     184B/184B
+e57eb14ee1e4 Verifying Checksum 
+e57eb14ee1e4 Download complete 
+4b7b4a8876e2 Downloading [=====>                                             ]  3.079MB/27.13MB
+4b7b4a8876e2 Downloading [======>                                            ]  3.636MB/27.13MB
+4b7b4a8876e2 Downloading [=======>                                           ]  4.193MB/27.13MB
+4b7b4a8876e2 Downloading [========>                                          ]   4.75MB/27.13MB
+84d5111c3c49 Downloading [>                                                  ]  118.7kB/11.6MB
+4b7b4a8876e2 Downloading [=========>                                         ]  5.307MB/27.13MB
+84d5111c3c49 Downloading [==>                                                ]    625kB/11.6MB
+092b78b8c46b Downloading [>                                                  ]  537.5kB/120.2MB
+4b7b4a8876e2 Downloading [==========>                                        ]  5.864MB/27.13MB
+84d5111c3c49 Downloading [=====>                                             ]  1.272MB/11.6MB
+84d5111c3c49 Downloading [=======>                                           ]  1.796MB/11.6MB
+4b7b4a8876e2 Downloading [===========>                                       ]  6.421MB/27.13MB
+092b78b8c46b Downloading [>                                                  ]  1.619MB/120.2MB
+84d5111c3c49 Downloading [==========>                                        ]  2.452MB/11.6MB
+4b7b4a8876e2 Downloading [=============>                                     ]  7.261MB/27.13MB
+84d5111c3c49 Downloading [=============>                                     ]  3.095MB/11.6MB
+092b78b8c46b Downloading [=>                                                 ]  2.696MB/120.2MB
+84d5111c3c49 Downloading [================>                                  ]  3.881MB/11.6MB
+4b7b4a8876e2 Downloading [==============>                                    ]  7.818MB/27.13MB
+092b78b8c46b Downloading [=>                                                 ]  3.237MB/120.2MB
+84d5111c3c49 Downloading [====================>                              ]  4.651MB/11.6MB
+4b7b4a8876e2 Downloading [===============>                                   ]  8.375MB/27.13MB
+84d5111c3c49 Downloading [======================>                            ]  5.303MB/11.6MB
+092b78b8c46b Downloading [=>                                                 ]  3.769MB/120.2MB
+4b7b4a8876e2 Downloading [================>                                  ]   8.94MB/27.13MB
+84d5111c3c49 Downloading [=========================>                         ]  5.954MB/11.6MB
+4b7b4a8876e2 Downloading [=================>                                 ]  9.497MB/27.13MB
+84d5111c3c49 Downloading [=============================>                     ]   6.74MB/11.6MB
+092b78b8c46b Downloading [=>                                                 ]   4.31MB/120.2MB
+4b7b4a8876e2 Downloading [==================>                                ]  10.05MB/27.13MB
+84d5111c3c49 Downloading [=============================>                     ]  6.867MB/11.6MB
+4b7b4a8876e2 Downloading [===================>                               ]  10.33MB/27.13MB
+84d5111c3c49 Downloading [===============================>                   ]  7.261MB/11.6MB
+4b7b4a8876e2 Downloading [===================>                               ]  10.61MB/27.13MB
+092b78b8c46b Downloading [==>                                                ]  4.851MB/120.2MB
+84d5111c3c49 Downloading [==================================>                ]  7.916MB/11.6MB
+4b7b4a8876e2 Downloading [====================>                              ]  11.17MB/27.13MB
+84d5111c3c49 Downloading [=====================================>             ]  8.702MB/11.6MB
+4b7b4a8876e2 Downloading [=====================>                             ]  11.45MB/27.13MB
+092b78b8c46b Downloading [==>                                                ]  5.391MB/120.2MB
+84d5111c3c49 Downloading [=========================================>         ]  9.616MB/11.6MB
+092b78b8c46b Downloading [==>                                                ]  5.932MB/120.2MB
+4b7b4a8876e2 Downloading [======================>                            ]     12MB/27.13MB
+84d5111c3c49 Downloading [============================================>      ]  10.27MB/11.6MB
+84d5111c3c49 Downloading [===============================================>   ]  11.06MB/11.6MB
+092b78b8c46b Downloading [==>                                                ]  6.473MB/120.2MB
+4b7b4a8876e2 Downloading [=======================>                           ]  12.56MB/27.13MB
+84d5111c3c49 Verifying Checksum 
+84d5111c3c49 Download complete 
+4b7b4a8876e2 Downloading [========================>                          ]   13.4MB/27.13MB
+092b78b8c46b Downloading [===>                                               ]  7.554MB/120.2MB
+4b7b4a8876e2 Downloading [=========================>                         ]  13.96MB/27.13MB
+092b78b8c46b Downloading [===>                                               ]  8.095MB/120.2MB
+4b7b4a8876e2 Downloading [==========================>                        ]  14.51MB/27.13MB
+092b78b8c46b Downloading [===>                                               ]  9.164MB/120.2MB
+4b7b4a8876e2 Downloading [===========================>                       ]  15.07MB/27.13MB
+092b78b8c46b Downloading [====>                                              ]  10.25MB/120.2MB
+0484e681c5a3 Downloading [========================================>          ]     772B/961B
+4b7b4a8876e2 Downloading [=============================>                     ]  15.92MB/27.13MB
+0484e681c5a3 Downloading [==================================================>]     961B/961B
+0484e681c5a3 Verifying Checksum 
+0484e681c5a3 Download complete 
+092b78b8c46b Downloading [====>                                              ]  11.33MB/120.2MB
+4b7b4a8876e2 Downloading [==============================>                    ]  16.76MB/27.13MB
+092b78b8c46b Downloading [=====>                                             ]   12.4MB/120.2MB
+4b7b4a8876e2 Downloading [================================>                  ]  17.59MB/27.13MB
+092b78b8c46b Downloading [=====>                                             ]  13.48MB/120.2MB
+4b7b4a8876e2 Downloading [=================================>                 ]  18.43MB/27.13MB
+4b7b4a8876e2 Downloading [==================================>                ]  18.98MB/27.13MB
+092b78b8c46b Downloading [======>                                            ]  14.56MB/120.2MB
+4b7b4a8876e2 Downloading [====================================>              ]  19.54MB/27.13MB
+092b78b8c46b Downloading [======>                                            ]  15.62MB/120.2MB
+4b7b4a8876e2 Downloading [=====================================>             ]  20.39MB/27.13MB
+092b78b8c46b Downloading [======>                                            ]   16.7MB/120.2MB
+4b7b4a8876e2 Downloading [======================================>            ]  20.95MB/27.13MB
+092b78b8c46b Downloading [=======>                                           ]  17.79MB/120.2MB
+4b7b4a8876e2 Downloading [=======================================>           ]   21.5MB/27.13MB
+4b7b4a8876e2 Downloading [========================================>          ]  22.06MB/27.13MB
+092b78b8c46b Downloading [=======>                                           ]  18.86MB/120.2MB
+092b78b8c46b Downloading [========>                                          ]  19.92MB/120.2MB
+4b7b4a8876e2 Downloading [==========================================>        ]   22.9MB/27.13MB
+092b78b8c46b Downloading [========>                                          ]  21.01MB/120.2MB
+4b7b4a8876e2 Downloading [===========================================>       ]  23.73MB/27.13MB
+092b78b8c46b Downloading [=========>                                         ]  22.08MB/120.2MB
+4b7b4a8876e2 Downloading [=============================================>     ]  24.57MB/27.13MB
+4b7b4a8876e2 Downloading [==============================================>    ]  25.12MB/27.13MB
+092b78b8c46b Downloading [=========>                                         ]  23.16MB/120.2MB
+4b7b4a8876e2 Downloading [===============================================>   ]  25.68MB/27.13MB
+092b78b8c46b Downloading [==========>                                        ]  24.25MB/120.2MB
+4b7b4a8876e2 Downloading [===============================================>   ]  25.96MB/27.13MB
+092b78b8c46b Downloading [==========>                                        ]  25.32MB/120.2MB
+4b7b4a8876e2 Downloading [=================================================> ]  26.79MB/27.13MB
+4b7b4a8876e2 Verifying Checksum 
+4b7b4a8876e2 Download complete 
+092b78b8c46b Downloading [==========>                                        ]   26.4MB/120.2MB
+4b7b4a8876e2 Extracting [>                                                  ]  294.9kB/27.13MB
+092b78b8c46b Downloading [===========>                                       ]  27.47MB/120.2MB
+4b7b4a8876e2 Extracting [=====>                                             ]  3.244MB/27.13MB
+092b78b8c46b Downloading [===========>                                       ]  28.55MB/120.2MB
+4b7b4a8876e2 Extracting [=============>                                     ]  7.078MB/27.13MB
+092b78b8c46b Downloading [============>                                      ]  29.62MB/120.2MB
+4b7b4a8876e2 Extracting [==================>                                ]  10.03MB/27.13MB
+4b7b4a8876e2 Extracting [=======================>                           ]  12.98MB/27.13MB
+092b78b8c46b Downloading [============>                                      ]  31.23MB/120.2MB
+4b7b4a8876e2 Extracting [=============================>                     ]  15.93MB/27.13MB
+092b78b8c46b Downloading [=============>                                     ]   32.3MB/120.2MB
+4b7b4a8876e2 Extracting [==================================>                ]  18.87MB/27.13MB
+092b78b8c46b Downloading [==============>                                    ]  33.92MB/120.2MB
+4b7b4a8876e2 Extracting [========================================>          ]  22.12MB/27.13MB
+092b78b8c46b Downloading [==============>                                    ]  35.54MB/120.2MB
+4b7b4a8876e2 Extracting [=============================================>     ]  24.77MB/27.13MB
+092b78b8c46b Downloading [===============>                                   ]  37.15MB/120.2MB
+4b7b4a8876e2 Extracting [================================================>  ]  26.25MB/27.13MB
+092b78b8c46b Downloading [================>                                  ]  38.76MB/120.2MB
+4b7b4a8876e2 Extracting [==================================================>]  27.13MB/27.13MB
+4b7b4a8876e2 Extracting [==================================================>]  27.13MB/27.13MB
+4b7b4a8876e2 Pull complete 
+092b78b8c46b Downloading [================>                                  ]  40.37MB/120.2MB
+8b8dacd31de1 Extracting [>                                                  ]  65.54kB/5.133MB
+8b8dacd31de1 Extracting [===============================>                   ]  3.277MB/5.133MB
+092b78b8c46b Downloading [=================>                                 ]  41.99MB/120.2MB
+8b8dacd31de1 Extracting [==================================================>]  5.133MB/5.133MB
+8b8dacd31de1 Pull complete 
+d825f869a5d7 Extracting [==================================================>]  4.601kB/4.601kB
+092b78b8c46b Downloading [==================>                                ]  43.61MB/120.2MB
+d825f869a5d7 Extracting [==================================================>]  4.601kB/4.601kB
+d825f869a5d7 Pull complete 
+e57eb14ee1e4 Extracting [==================================================>]     184B/184B
+e57eb14ee1e4 Extracting [==================================================>]     184B/184B
+e57eb14ee1e4 Pull complete 
+092b78b8c46b Downloading [==================>                                ]  45.23MB/120.2MB
+84d5111c3c49 Extracting [>                                                  ]  131.1kB/11.6MB
+092b78b8c46b Downloading [===================>                               ]  46.84MB/120.2MB
+84d5111c3c49 Extracting [===============>                                   ]  3.539MB/11.6MB
+092b78b8c46b Downloading [===================>                               ]  47.92MB/120.2MB
+84d5111c3c49 Extracting [=============================>                     ]  6.816MB/11.6MB
+092b78b8c46b Downloading [====================>                              ]  49.53MB/120.2MB
+84d5111c3c49 Extracting [=============================================>     ]  10.62MB/11.6MB
+84d5111c3c49 Extracting [==================================================>]   11.6MB/11.6MB
+84d5111c3c49 Pull complete 
+092b78b8c46b Downloading [=====================>                             ]  51.14MB/120.2MB
+092b78b8c46b Downloading [=====================>                             ]  52.22MB/120.2MB
+092b78b8c46b Downloading [======================>                            ]  54.36MB/120.2MB
+092b78b8c46b Downloading [=======================>                           ]  55.43MB/120.2MB
+092b78b8c46b Downloading [=======================>                           ]  57.05MB/120.2MB
+092b78b8c46b Downloading [========================>                          ]  58.67MB/120.2MB
+092b78b8c46b Downloading [=========================>                         ]  60.27MB/120.2MB
+092b78b8c46b Downloading [=========================>                         ]   61.9MB/120.2MB
+092b78b8c46b Downloading [==========================>                        ]  63.51MB/120.2MB
+092b78b8c46b Downloading [===========================>                       ]  65.13MB/120.2MB
+092b78b8c46b Downloading [===========================>                       ]  66.21MB/120.2MB
+092b78b8c46b Downloading [============================>                      ]  67.82MB/120.2MB
+092b78b8c46b Downloading [============================>                      ]  68.89MB/120.2MB
+092b78b8c46b Downloading [=============================>                     ]  70.48MB/120.2MB
+092b78b8c46b Downloading [=============================>                     ]   72.1MB/120.2MB
+092b78b8c46b Downloading [==============================>                    ]  73.72MB/120.2MB
+092b78b8c46b Downloading [===============================>                   ]  75.33MB/120.2MB
+092b78b8c46b Downloading [================================>                  ]  76.95MB/120.2MB
+092b78b8c46b Downloading [================================>                  ]  78.56MB/120.2MB
+092b78b8c46b Downloading [=================================>                 ]  80.17MB/120.2MB
+092b78b8c46b Downloading [==================================>                ]  82.31MB/120.2MB
+092b78b8c46b Downloading [==================================>                ]  83.92MB/120.2MB
+092b78b8c46b Downloading [===================================>               ]  86.08MB/120.2MB
+092b78b8c46b Downloading [====================================>              ]  87.15MB/120.2MB
+092b78b8c46b Downloading [====================================>              ]  88.77MB/120.2MB
+092b78b8c46b Downloading [=====================================>             ]  90.39MB/120.2MB
+092b78b8c46b Downloading [======================================>            ]     92MB/120.2MB
+092b78b8c46b Downloading [======================================>            ]  93.61MB/120.2MB
+092b78b8c46b Downloading [=======================================>           ]  95.22MB/120.2MB
+092b78b8c46b Downloading [========================================>          ]  97.37MB/120.2MB
+092b78b8c46b Downloading [=========================================>         ]  98.97MB/120.2MB
+092b78b8c46b Downloading [=========================================>         ]  100.6MB/120.2MB
+092b78b8c46b Downloading [==========================================>        ]  102.2MB/120.2MB
+092b78b8c46b Downloading [==========================================>        ]  103.3MB/120.2MB
+092b78b8c46b Downloading [===========================================>       ]  104.9MB/120.2MB
+092b78b8c46b Downloading [============================================>      ]  106.5MB/120.2MB
+092b78b8c46b Downloading [============================================>      ]  108.1MB/120.2MB
+092b78b8c46b Downloading [=============================================>     ]  109.8MB/120.2MB
+092b78b8c46b Downloading [==============================================>    ]  111.4MB/120.2MB
+092b78b8c46b Downloading [==============================================>    ]    113MB/120.2MB
+092b78b8c46b Downloading [===============================================>   ]  114.6MB/120.2MB
+092b78b8c46b Downloading [================================================>  ]  116.2MB/120.2MB
+092b78b8c46b Downloading [================================================>  ]  117.8MB/120.2MB
+092b78b8c46b Downloading [=================================================> ]  119.4MB/120.2MB
+092b78b8c46b Verifying Checksum 
+092b78b8c46b Download complete 
+092b78b8c46b Extracting [>                                                  ]  557.1kB/120.2MB
+092b78b8c46b Extracting [=======>                                           ]  17.27MB/120.2MB
+092b78b8c46b Extracting [===========>                                       ]  28.41MB/120.2MB
+092b78b8c46b Extracting [=================>                                 ]  42.34MB/120.2MB
+092b78b8c46b Extracting [=======================>                           ]  56.26MB/120.2MB
+092b78b8c46b Extracting [=================================>                 ]  79.66MB/120.2MB
+092b78b8c46b Extracting [====================================>              ]   86.9MB/120.2MB
+092b78b8c46b Extracting [=========================================>         ]  100.3MB/120.2MB
+092b78b8c46b Extracting [==============================================>    ]  110.9MB/120.2MB
+092b78b8c46b Extracting [=================================================> ]  119.2MB/120.2MB
+092b78b8c46b Extracting [==================================================>]  120.2MB/120.2MB
+092b78b8c46b Pull complete 
+0484e681c5a3 Extracting [==================================================>]     961B/961B
+0484e681c5a3 Extracting [==================================================>]     961B/961B
+0484e681c5a3 Pull complete 
+relay Pulled 
+Network sentry-self-hosted_default  Creating
+Network sentry-self-hosted_default  Created
+Volume "sentry-self-hosted_sentry-nginx-cache"  Creating
+Volume "sentry-self-hosted_sentry-nginx-cache"  Created
+Volume "sentry-self-hosted_sentry-secrets"  Creating
+Volume "sentry-self-hosted_sentry-secrets"  Created
+Volume "sentry-self-hosted_sentry-zookeeper-log"  Creating
+Volume "sentry-self-hosted_sentry-zookeeper-log"  Created
+Volume "sentry-self-hosted_sentry-clickhouse-log"  Creating
+Volume "sentry-self-hosted_sentry-clickhouse-log"  Created
+Volume "sentry-self-hosted_sentry-smtp-log"  Creating
+Volume "sentry-self-hosted_sentry-smtp-log"  Created
+Volume "sentry-self-hosted_sentry-smtp"  Creating
+Volume "sentry-self-hosted_sentry-smtp"  Created
+Volume "sentry-self-hosted_sentry-kafka-log"  Creating
+Volume "sentry-self-hosted_sentry-kafka-log"  Created
+Relay credentials written to ../relay/credentials.json.
+
+▶ Generating secret key ...
+write /dev/stdout: broken pipe
+Secret key written to ../sentry/config.yml
+
+▶ Replacing TSDB ...
+
+▶ Fetching and updating Docker images ...
+22.9.0: Pulling from getsentry/sentry
+7a6db449b51b: Already exists
+e238bceb2957: Already exists
+9c37eda4ff12: Already exists
+120078faa760: Already exists
+2d3523ccd6f4: Already exists
+b0644ba60bfd: Pulling fs layer
+d2641a74e983: Pulling fs layer
+874bb236691d: Pulling fs layer
+efac9ff1aaaa: Pulling fs layer
+7f5edba40217: Pulling fs layer
+d00c9d1d21ae: Pulling fs layer
+9749ba198adb: Pulling fs layer
+7e0f98cae48c: Pulling fs layer
+81f396c579d4: Pulling fs layer
+77dcd7485b88: Pulling fs layer
+77dcd7485b88: Waiting
+efac9ff1aaaa: Waiting
+7f5edba40217: Waiting
+d00c9d1d21ae: Waiting
+9749ba198adb: Waiting
+7e0f98cae48c: Waiting
+81f396c579d4: Waiting
+b0644ba60bfd: Verifying Checksum
+874bb236691d: Verifying Checksum
+874bb236691d: Download complete
+b0644ba60bfd: Pull complete
+d2641a74e983: Verifying Checksum
+d2641a74e983: Pull complete
+874bb236691d: Pull complete
+d00c9d1d21ae: Verifying Checksum
+d00c9d1d21ae: Download complete
+9749ba198adb: Verifying Checksum
+9749ba198adb: Download complete
+7e0f98cae48c: Verifying Checksum
+81f396c579d4: Verifying Checksum
+81f396c579d4: Download complete
+77dcd7485b88: Verifying Checksum
+77dcd7485b88: Download complete
+efac9ff1aaaa: Verifying Checksum
+efac9ff1aaaa: Download complete
+7f5edba40217: Verifying Checksum
+7f5edba40217: Download complete
+efac9ff1aaaa: Pull complete
+7f5edba40217: Pull complete
+d00c9d1d21ae: Pull complete
+9749ba198adb: Pull complete
+7e0f98cae48c: Pull complete
+81f396c579d4: Pull complete
+77dcd7485b88: Pull complete
+Digest: sha256:a6eb413caa953c172f1a44d355879ba30a4ecdb40553d4d11f20c3e12063ba18
+Status: Downloaded newer image for getsentry/sentry:22.9.0
+docker.io/getsentry/sentry:22.9.0
+
+▶ Building and tagging Docker images ...
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 546B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/getsentry/sentry:22.9.0
+#3 ...
+
+#4 [auth] getsentry/sentry:pull token for registry-1.docker.io
+#4 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/getsentry/sentry:22.9.0
+#3 DONE 2.2s
+
+#5 [internal] load build context
+#5 transferring context: 29.68kB done
+#5 DONE 0.0s
+
+#6 [1/4] FROM docker.io/getsentry/sentry:22.9.0@sha256:a6eb413caa953c172f1a44d355879ba30a4ecdb40553d4d11f20c3e12063ba18
+#6 resolve docker.io/getsentry/sentry:22.9.0@sha256:a6eb413caa953c172f1a44d355879ba30a4ecdb40553d4d11f20c3e12063ba18 done
+#6 DONE 0.2s
+
+#7 [2/4] COPY . /usr/src/sentry
+#7 DONE 0.0s
+
+#8 [3/4] RUN if [ -s /usr/src/sentry/enhance-image.sh ]; then     /usr/src/sentry/enhance-image.sh; fi
+#8 DONE 0.2s
+
+#9 [4/4] RUN if [ -s /usr/src/sentry/requirements.txt ]; then     echo "sentry/requirements.txt is deprecated, use sentry/enhance-image.sh - see https://github.com/getsentry/self-hosted#enhance-sentry-image";     pip install -r /usr/src/sentry/requirements.txt; fi
+#9 DONE 0.2s
+
+#10 exporting to image
+#10 exporting layers 0.0s done
+#10 writing image sha256:e7039a900c0aa87f6c8a5434c85dd7238a5aea9791a8edbaff28d60711edc9c4 done
+#10 naming to docker.io/library/sentry-self-hosted-local done
+#10 DONE 0.1s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+#1 [clickhouse-self-hosted-local internal] load build definition from Dockerfile
+#1 transferring dockerfile: 154B done
+#1 DONE 0.0s
+
+#2 [sentry-self-hosted-local internal] load build definition from Dockerfile
+#2 transferring dockerfile: 115B done
+#2 DONE 0.0s
+
+#3 [snuba-cleanup-self-hosted-local internal] load build definition from Dockerfile
+#3 transferring dockerfile: 552B done
+#3 DONE 0.0s
+
+#4 [sentry-cleanup-self-hosted-local internal] load build definition from Dockerfile
+#4 transferring dockerfile: 552B done
+#4 DONE 0.0s
+
+#5 [symbolicator-cleanup-self-hosted-local internal] load build definition from Dockerfile
+#5 transferring dockerfile: 552B done
+#5 DONE 0.0s
+
+#6 [clickhouse-self-hosted-local internal] load .dockerignore
+#6 transferring context: 2B done
+#6 DONE 0.0s
+
+#7 [symbolicator-cleanup-self-hosted-local internal] load .dockerignore
+#7 transferring context: 2B done
+#7 DONE 0.0s
+
+#8 [sentry-self-hosted-local internal] load .dockerignore
+#8 transferring context: 2B done
+#8 DONE 0.0s
+
+#9 [sentry-cleanup-self-hosted-local internal] load .dockerignore
+#9 transferring context: 2B done
+#9 DONE 0.0s
+
+#10 [snuba-cleanup-self-hosted-local internal] load .dockerignore
+#10 transferring context: 2B done
+#10 DONE 0.0s
+
+#11 [clickhouse-self-hosted-local internal] load metadata for docker.io/altinity/clickhouse-server:21.6.1.6734-testing-arm
+#11 ...
+
+#12 [sentry-cleanup-self-hosted-local internal] load metadata for docker.io/library/sentry-self-hosted-local:latest
+#12 DONE 0.0s
+
+#13 [sentry-cleanup-self-hosted-local internal] load build context
+#13 transferring context: 745B done
+#13 DONE 0.0s
+
+#14 [sentry-cleanup-self-hosted-local 1/5] FROM docker.io/library/sentry-self-hosted-local
+#14 DONE 0.1s
+
+#15 [sentry-cleanup-self-hosted-local 2/5] RUN if [ -z "${http_proxy}" ]; then echo "Acquire::http::proxy "${http_proxy}";" >> /etc/apt/apt.conf; fi
+#15 DONE 0.2s
+
+#16 [sentry-self-hosted-local internal] load metadata for docker.io/getsentry/sentry:22.9.0
+#16 DONE 0.3s
+
+#17 [sentry-self-hosted-local 1/4] FROM docker.io/getsentry/sentry:22.9.0@sha256:a6eb413caa953c172f1a44d355879ba30a4ecdb40553d4d11f20c3e12063ba18
+#17 DONE 0.0s
+
+#18 [sentry-self-hosted-local internal] load build context
+#18 transferring context: 993B done
+#18 DONE 0.0s
+
+#19 [sentry-self-hosted-local 2/4] COPY . /usr/src/sentry
+#19 CACHED
+
+#20 [sentry-self-hosted-local 3/4] RUN if [ -s /usr/src/sentry/enhance-image.sh ]; then     /usr/src/sentry/enhance-image.sh; fi
+#20 CACHED
+
+#21 [sentry-self-hosted-local 4/4] RUN if [ -s /usr/src/sentry/requirements.txt ]; then     echo "sentry/requirements.txt is deprecated, use sentry/enhance-image.sh - see https://github.com/getsentry/self-hosted#enhance-sentry-image";     pip install -r /usr/src/sentry/requirements.txt; fi
+#21 CACHED
+
+#22 [sentry-self-hosted-local] exporting to image
+#22 exporting layers done
+#22 writing image sha256:e7039a900c0aa87f6c8a5434c85dd7238a5aea9791a8edbaff28d60711edc9c4
+#22 writing image sha256:e7039a900c0aa87f6c8a5434c85dd7238a5aea9791a8edbaff28d60711edc9c4 done
+#22 naming to docker.io/library/sentry-self-hosted-local done
+#22 DONE 0.0s
+
+#23 [sentry-cleanup-self-hosted-local 3/5] RUN if [ -z "${https_proxy}" ]; then echo "Acquire::https::proxy "${https_proxy}";" >> /etc/apt/apt.conf; fi
+#23 DONE 0.3s
+
+#24 [sentry-cleanup-self-hosted-local 4/5] RUN apt-get update && apt-get install -y --no-install-recommends cron &&     rm -r /var/lib/apt/lists/*
+#24 ...
+
+#25 [auth] altinity/clickhouse-server:pull token for registry-1.docker.io
+#25 DONE 0.0s
+
+#26 [auth] getsentry/snuba:pull token for registry-1.docker.io
+#26 DONE 0.0s
+
+#27 [auth] getsentry/symbolicator:pull token for registry-1.docker.io
+#27 DONE 0.0s
+
+#28 [snuba-cleanup-self-hosted-local internal] load metadata for docker.io/getsentry/snuba:22.9.0
+#28 ...
+
+#11 [clickhouse-self-hosted-local internal] load metadata for docker.io/altinity/clickhouse-server:21.6.1.6734-testing-arm
+#11 DONE 3.1s
+
+#29 [clickhouse-self-hosted-local 1/1] FROM docker.io/altinity/clickhouse-server:21.6.1.6734-testing-arm@sha256:9a4516444fef9e0f11ee6b2de716d3b97b36bf05d9cc2d44c4596cfb0584dea6
+#29 resolve docker.io/altinity/clickhouse-server:21.6.1.6734-testing-arm@sha256:9a4516444fef9e0f11ee6b2de716d3b97b36bf05d9cc2d44c4596cfb0584dea6 done
+#29 sha256:4613c0e98b40c5cc04e4c71e47637123ed78745200527bb3a12bb7a191417eda 10.62kB / 10.62kB done
+#29 sha256:9bf18fab4cfbf479fa9f8409ad47e2702c63241304c2cdd4c33f2a1633c5f85e 0B / 850B 0.2s
+#29 sha256:9a4516444fef9e0f11ee6b2de716d3b97b36bf05d9cc2d44c4596cfb0584dea6 2.20kB / 2.20kB done
+#29 sha256:80bc30679ac1fd798f3241208c14accd6a364cb8a6224d1127dfb1577d10554f 0B / 27.14MB 0.2s
+#29 sha256:5979309c983a2adeff352538937475cf961d49c34194fa2aab142effe19ed9c1 0B / 189B 0.2s
+#29 ...
+
+#30 [symbolicator-cleanup-self-hosted-local internal] load metadata for docker.io/getsentry/symbolicator:0.5.1
+#30 DONE 3.6s
+
+#31 [symbolicator-cleanup-self-hosted-local internal] load build context
+#31 transferring context: 745B done
+#31 DONE 0.0s
+
+#29 [clickhouse-self-hosted-local 1/1] FROM docker.io/altinity/clickhouse-server:21.6.1.6734-testing-arm@sha256:9a4516444fef9e0f11ee6b2de716d3b97b36bf05d9cc2d44c4596cfb0584dea6
+#29 ...
+
+#32 [symbolicator-cleanup-self-hosted-local 2/5] RUN if [ -z "${http_proxy}" ]; then echo "Acquire::http::proxy "${http_proxy}";" >> /etc/apt/apt.conf; fi
+#32 DONE 0.2s
+
+#29 [clickhouse-self-hosted-local 1/1] FROM docker.io/altinity/clickhouse-server:21.6.1.6734-testing-arm@sha256:9a4516444fef9e0f11ee6b2de716d3b97b36bf05d9cc2d44c4596cfb0584dea6
+#29 sha256:5979309c983a2adeff352538937475cf961d49c34194fa2aab142effe19ed9c1 189B / 189B 0.6s done
+#29 sha256:089e57bca418e0b3706393df9c9764f72cb7078b220ca2713816ed9e41ddf1bd 0B / 478.35MB 0.7s
+#29 sha256:9bf18fab4cfbf479fa9f8409ad47e2702c63241304c2cdd4c33f2a1633c5f85e 850B / 850B 0.8s done
+#29 sha256:4355e54f3dcc7f4d1b436cd0ff0249c00965d669188907892159bfd8b051521e 0B / 863.47kB 0.9s
+#29 ...
+
+#28 [snuba-cleanup-self-hosted-local internal] load metadata for docker.io/getsentry/snuba:22.9.0
+#28 DONE 4.0s
+
+#29 [clickhouse-self-hosted-local 1/1] FROM docker.io/altinity/clickhouse-server:21.6.1.6734-testing-arm@sha256:9a4516444fef9e0f11ee6b2de716d3b97b36bf05d9cc2d44c4596cfb0584dea6
+#29 sha256:80bc30679ac1fd798f3241208c14accd6a364cb8a6224d1127dfb1577d10554f 2.10MB / 27.14MB 1.0s
+#29 ...
+
+#33 [snuba-cleanup-self-hosted-local internal] load build context
+#33 transferring context: 745B done
+#33 DONE 0.0s
+
+#34 [symbolicator-cleanup-self-hosted-local 3/5] RUN if [ -z "${https_proxy}" ]; then echo "Acquire::https::proxy "${https_proxy}";" >> /etc/apt/apt.conf; fi
+#34 DONE 0.3s
+
+#35 [snuba-cleanup-self-hosted-local 1/5] FROM docker.io/getsentry/snuba:22.9.0@sha256:893923ad38ab3133c7837688435659d230f11aaf3bee0a9372efe3c2a9c405f4
+#35 resolve docker.io/getsentry/snuba:22.9.0@sha256:893923ad38ab3133c7837688435659d230f11aaf3bee0a9372efe3c2a9c405f4 0.0s done
+#35 DONE 0.1s
+
+#29 [clickhouse-self-hosted-local 1/1] FROM docker.io/altinity/clickhouse-server:21.6.1.6734-testing-arm@sha256:9a4516444fef9e0f11ee6b2de716d3b97b36bf05d9cc2d44c4596cfb0584dea6
+#29 ...
+
+#36 [snuba-cleanup-self-hosted-local 2/5] RUN if [ -z "${http_proxy}" ]; then echo "Acquire::http::proxy "${http_proxy}";" >> /etc/apt/apt.conf; fi
+#36 DONE 0.2s
+
+#29 [clickhouse-self-hosted-local 1/1] FROM docker.io/altinity/clickhouse-server:21.6.1.6734-testing-arm@sha256:9a4516444fef9e0f11ee6b2de716d3b97b36bf05d9cc2d44c4596cfb0584dea6
+#29 sha256:80bc30679ac1fd798f3241208c14accd6a364cb8a6224d1127dfb1577d10554f 4.19MB / 27.14MB 1.4s
+#29 ...
+
+#37 [snuba-cleanup-self-hosted-local 3/5] RUN if [ -z "${https_proxy}" ]; then echo "Acquire::https::proxy "${https_proxy}";" >> /etc/apt/apt.conf; fi
+#37 DONE 0.2s
+
+#29 [clickhouse-self-hosted-local 1/1] FROM docker.io/altinity/clickhouse-server:21.6.1.6734-testing-arm@sha256:9a4516444fef9e0f11ee6b2de716d3b97b36bf05d9cc2d44c4596cfb0584dea6
+#29 sha256:80bc30679ac1fd798f3241208c14accd6a364cb8a6224d1127dfb1577d10554f 6.29MB / 27.14MB 1.9s
+#29 sha256:4355e54f3dcc7f4d1b436cd0ff0249c00965d669188907892159bfd8b051521e 863.47kB / 863.47kB 1.9s done
+#29 sha256:c8706efe3e978f18d75238d7ec01db9d92a5212dc1d5bcfda6dd79fd246aebca 0B / 149B 2.0s
+#29 sha256:80bc30679ac1fd798f3241208c14accd6a364cb8a6224d1127dfb1577d10554f 8.39MB / 27.14MB 2.4s
+#29 sha256:c8706efe3e978f18d75238d7ec01db9d92a5212dc1d5bcfda6dd79fd246aebca 149B / 149B 2.3s done
+#29 sha256:9fc4409d6bfbec739fdc8453926e1766f3af7a563b3bad867130266ede019e8a 0B / 364B 2.4s
+#29 sha256:9fc4409d6bfbec739fdc8453926e1766f3af7a563b3bad867130266ede019e8a 364B / 364B 2.6s done
+#29 sha256:a2e34557e26ccbe9d82608e111b5290ddd46e4212378c2d7e23ab3a0a327948e 0B / 2.16kB 2.7s
+#29 sha256:80bc30679ac1fd798f3241208c14accd6a364cb8a6224d1127dfb1577d10554f 10.49MB / 27.14MB 2.9s
+#29 sha256:a2e34557e26ccbe9d82608e111b5290ddd46e4212378c2d7e23ab3a0a327948e 2.16kB / 2.16kB 3.0s done
+#29 sha256:80bc30679ac1fd798f3241208c14accd6a364cb8a6224d1127dfb1577d10554f 12.58MB / 27.14MB 3.3s
+#29 sha256:80bc30679ac1fd798f3241208c14accd6a364cb8a6224d1127dfb1577d10554f 14.68MB / 27.14MB 3.8s
+#29 sha256:80bc30679ac1fd798f3241208c14accd6a364cb8a6224d1127dfb1577d10554f 16.78MB / 27.14MB 4.5s
+#29 sha256:80bc30679ac1fd798f3241208c14accd6a364cb8a6224d1127dfb1577d10554f 18.87MB / 27.14MB 5.0s
+#29 sha256:80bc30679ac1fd798f3241208c14accd6a364cb8a6224d1127dfb1577d10554f 20.97MB / 27.14MB 5.6s
+#29 sha256:089e57bca418e0b3706393df9c9764f72cb7078b220ca2713816ed9e41ddf1bd 19.92MB / 478.35MB 5.8s
+#29 sha256:80bc30679ac1fd798f3241208c14accd6a364cb8a6224d1127dfb1577d10554f 23.07MB / 27.14MB 6.4s
+#29 sha256:80bc30679ac1fd798f3241208c14accd6a364cb8a6224d1127dfb1577d10554f 25.17MB / 27.14MB 7.3s
+#29 extracting sha256:80bc30679ac1fd798f3241208c14accd6a364cb8a6224d1127dfb1577d10554f
+#29 sha256:80bc30679ac1fd798f3241208c14accd6a364cb8a6224d1127dfb1577d10554f 27.14MB / 27.14MB 8.1s done
+#29 ...
+
+#24 [sentry-cleanup-self-hosted-local 4/5] RUN apt-get update && apt-get install -y --no-install-recommends cron &&     rm -r /var/lib/apt/lists/*
+#24 1.484 Get:1 http://deb.debian.org/debian bullseye InRelease [116 kB]
+#24 3.747 Get:2 http://deb.debian.org/debian-security bullseye-security InRelease [48.4 kB]
+#24 4.574 Get:3 http://deb.debian.org/debian bullseye-updates InRelease [44.1 kB]
+#24 5.581 Get:4 http://deb.debian.org/debian bullseye/main amd64 Packages [8184 kB]
+#24 ...
+
+#29 [clickhouse-self-hosted-local 1/1] FROM docker.io/altinity/clickhouse-server:21.6.1.6734-testing-arm@sha256:9a4516444fef9e0f11ee6b2de716d3b97b36bf05d9cc2d44c4596cfb0584dea6
+#29 extracting sha256:80bc30679ac1fd798f3241208c14accd6a364cb8a6224d1127dfb1577d10554f 1.0s done
+#29 extracting sha256:9bf18fab4cfbf479fa9f8409ad47e2702c63241304c2cdd4c33f2a1633c5f85e done
+#29 extracting sha256:5979309c983a2adeff352538937475cf961d49c34194fa2aab142effe19ed9c1
+#29 extracting sha256:5979309c983a2adeff352538937475cf961d49c34194fa2aab142effe19ed9c1 done
+#29 sha256:089e57bca418e0b3706393df9c9764f72cb7078b220ca2713816ed9e41ddf1bd 44.04MB / 478.35MB 10.1s
+#29 ...
+
+#38 [symbolicator-cleanup-self-hosted-local 1/5] FROM docker.io/getsentry/symbolicator:0.5.1@sha256:34c9db97a7aecb40530cbe53b02a924619df3f5af8314a183c06cafa7e355a99
+#38 resolve docker.io/getsentry/symbolicator:0.5.1@sha256:34c9db97a7aecb40530cbe53b02a924619df3f5af8314a183c06cafa7e355a99 done
+#38 ...
+
+#29 [clickhouse-self-hosted-local 1/1] FROM docker.io/altinity/clickhouse-server:21.6.1.6734-testing-arm@sha256:9a4516444fef9e0f11ee6b2de716d3b97b36bf05d9cc2d44c4596cfb0584dea6
+#29 ...
+
+#39 [symbolicator-cleanup-self-hosted-local 4/5] RUN apt-get update && apt-get install -y --no-install-recommends cron &&     rm -r /var/lib/apt/lists/*
+#0 1.060 Get:1 http://security.debian.org/debian-security stretch/updates InRelease [59.1 kB]
+#0 1.070 Ign:2 http://deb.debian.org/debian stretch InRelease
+#0 1.223 Get:3 http://deb.debian.org/debian stretch-updates InRelease [93.6 kB]
+#0 1.485 Get:4 http://deb.debian.org/debian stretch Release [118 kB]
+#0 1.647 Get:5 http://deb.debian.org/debian stretch Release.gpg [3177 B]
+#0 3.008 Get:6 http://security.debian.org/debian-security stretch/updates/main amd64 Packages [782 kB]
+#0 6.218 Get:7 http://deb.debian.org/debian stretch/main amd64 Packages [7080 kB]
+#39 ...
+
+#29 [clickhouse-self-hosted-local 1/1] FROM docker.io/altinity/clickhouse-server:21.6.1.6734-testing-arm@sha256:9a4516444fef9e0f11ee6b2de716d3b97b36bf05d9cc2d44c4596cfb0584dea6
+#29 ...
+
+#40 [snuba-cleanup-self-hosted-local 4/5] RUN apt-get update && apt-get install -y --no-install-recommends cron &&     rm -r /var/lib/apt/lists/*
+#0 0.907 Get:1 http://deb.debian.org/debian bullseye InRelease [116 kB]
+#0 1.216 Get:2 http://deb.debian.org/debian-security bullseye-security InRelease [48.4 kB]
+#0 1.383 Get:3 http://deb.debian.org/debian bullseye-updates InRelease [44.1 kB]
+#0 3.110 Get:4 http://deb.debian.org/debian bullseye/main amd64 Packages [8184 kB]
+#0 7.970 Get:5 http://deb.debian.org/debian-security bullseye-security/main amd64 Packages [189 kB]
+#0 8.009 Get:6 http://deb.debian.org/debian bullseye-updates/main amd64 Packages [6344 B]
+#40 ...
+
+#29 [clickhouse-self-hosted-local 1/1] FROM docker.io/altinity/clickhouse-server:21.6.1.6734-testing-arm@sha256:9a4516444fef9e0f11ee6b2de716d3b97b36bf05d9cc2d44c4596cfb0584dea6
+#29 sha256:089e57bca418e0b3706393df9c9764f72cb7078b220ca2713816ed9e41ddf1bd 68.16MB / 478.35MB 13.4s
+#29 sha256:089e57bca418e0b3706393df9c9764f72cb7078b220ca2713816ed9e41ddf1bd 93.32MB / 478.35MB 15.8s
+#29 sha256:089e57bca418e0b3706393df9c9764f72cb7078b220ca2713816ed9e41ddf1bd 117.44MB / 478.35MB 17.7s
+#29 ...
+
+#24 [sentry-cleanup-self-hosted-local 4/5] RUN apt-get update && apt-get install -y --no-install-recommends cron &&     rm -r /var/lib/apt/lists/*
+#24 12.46 Get:5 http://deb.debian.org/debian-security bullseye-security/main amd64 Packages [189 kB]
+#24 12.50 Get:6 http://deb.debian.org/debian bullseye-updates/main amd64 Packages [6344 B]
+#24 20.88 Fetched 8587 kB in 20s (421 kB/s)
+#24 20.88 Reading package lists...
+#24 ...
+
+#29 [clickhouse-self-hosted-local 1/1] FROM docker.io/altinity/clickhouse-server:21.6.1.6734-testing-arm@sha256:9a4516444fef9e0f11ee6b2de716d3b97b36bf05d9cc2d44c4596cfb0584dea6
+#29 sha256:089e57bca418e0b3706393df9c9764f72cb7078b220ca2713816ed9e41ddf1bd 141.56MB / 478.35MB 21.3s
+#29 ...
+
+#39 [symbolicator-cleanup-self-hosted-local 4/5] RUN apt-get update && apt-get install -y --no-install-recommends cron &&     rm -r /var/lib/apt/lists/*
+#39 13.80 Fetched 8135 kB in 13s (614 kB/s)
+#39 13.80 Reading package lists...
+#39 18.09 Reading package lists...
+#39 21.74 Building dependency tree...
+#39 22.33 Reading state information...
+#39 22.71 Suggested packages:
+#39 22.71   anacron logrotate checksecurity
+#39 22.71 Recommended packages:
+#39 22.71   exim4 | postfix | mail-transport-agent
+#39 22.80 The following NEW packages will be installed:
+#39 22.80   cron
+#39 22.94 0 upgraded, 1 newly installed, 0 to remove and 3 not upgraded.
+#39 22.94 Need to get 96.6 kB of archives.
+#39 22.94 After this operation, 257 kB of additional disk space will be used.
+#39 22.94 Get:1 http://security.debian.org/debian-security stretch/updates/main amd64 cron amd64 3.0pl1-128+deb9u2 [96.6 kB]
+#39 23.72 debconf: delaying package configuration, since apt-utils is not installed
+#39 23.81 Fetched 96.6 kB in 0s (950 kB/s)
+#39 ...
+
+#29 [clickhouse-self-hosted-local 1/1] FROM docker.io/altinity/clickhouse-server:21.6.1.6734-testing-arm@sha256:9a4516444fef9e0f11ee6b2de716d3b97b36bf05d9cc2d44c4596cfb0584dea6
+#29 sha256:089e57bca418e0b3706393df9c9764f72cb7078b220ca2713816ed9e41ddf1bd 166.72MB / 478.35MB 25.0s
+#29 ...
+
+#40 [snuba-cleanup-self-hosted-local 4/5] RUN apt-get update && apt-get install -y --no-install-recommends cron &&     rm -r /var/lib/apt/lists/*
+#40 15.07 Fetched 8587 kB in 14s (594 kB/s)
+#40 15.07 Reading package lists...
+#40 18.92 Reading package lists...
+#40 22.97 Building dependency tree...
+#40 23.84 Reading state information...
+#40 24.69 The following additional packages will be installed:
+#40 24.69   sensible-utils
+#40 24.70 Suggested packages:
+#40 24.70   anacron logrotate checksecurity
+#40 24.70 Recommended packages:
+#40 24.70   default-mta | mail-transport-agent
+#40 24.98 The following NEW packages will be installed:
+#40 24.99   cron sensible-utils
+#40 ...
+
+#29 [clickhouse-self-hosted-local 1/1] FROM docker.io/altinity/clickhouse-server:21.6.1.6734-testing-arm@sha256:9a4516444fef9e0f11ee6b2de716d3b97b36bf05d9cc2d44c4596cfb0584dea6
+#29 sha256:089e57bca418e0b3706393df9c9764f72cb7078b220ca2713816ed9e41ddf1bd 191.89MB / 478.35MB 26.9s
+#29 ...
+
+#39 [symbolicator-cleanup-self-hosted-local 4/5] RUN apt-get update && apt-get install -y --no-install-recommends cron &&     rm -r /var/lib/apt/lists/*
+#39 23.96 Selecting previously unselected package cron.
+#39 23.97 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6906 files and directories currently installed.)
+#39 23.98 Preparing to unpack .../cron_3.0pl1-128+deb9u2_amd64.deb ...
+#39 24.16 Unpacking cron (3.0pl1-128+deb9u2) ...
+#39 24.34 Setting up cron (3.0pl1-128+deb9u2) ...
+#39 24.89 Adding group `crontab' (GID 101) ...
+#39 24.96 Done.
+#39 26.23 update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
+#39 26.31 invoke-rc.d: could not determine current runlevel
+#39 26.38 invoke-rc.d: policy-rc.d denied execution of start.
+#39 DONE 26.7s
+
+#29 [clickhouse-self-hosted-local 1/1] FROM docker.io/altinity/clickhouse-server:21.6.1.6734-testing-arm@sha256:9a4516444fef9e0f11ee6b2de716d3b97b36bf05d9cc2d44c4596cfb0584dea6
+#29 ...
+
+#41 [symbolicator-cleanup-self-hosted-local 5/5] COPY entrypoint.sh /entrypoint.sh
+#41 DONE 0.0s
+
+#29 [clickhouse-self-hosted-local 1/1] FROM docker.io/altinity/clickhouse-server:21.6.1.6734-testing-arm@sha256:9a4516444fef9e0f11ee6b2de716d3b97b36bf05d9cc2d44c4596cfb0584dea6
+#29 ...
+
+#22 [symbolicator-cleanup-self-hosted-local] exporting to image
+#22 exporting layers 0.1s done
+#22 writing image sha256:18c52d1461de275f3a4efc234ff300fadbfc3e018b2edb188f4fad0077a4a2c9 done
+#22 naming to docker.io/library/symbolicator-cleanup-self-hosted-local done
+#22 DONE 0.1s
+
+#29 [clickhouse-self-hosted-local 1/1] FROM docker.io/altinity/clickhouse-server:21.6.1.6734-testing-arm@sha256:9a4516444fef9e0f11ee6b2de716d3b97b36bf05d9cc2d44c4596cfb0584dea6
+#29 sha256:089e57bca418e0b3706393df9c9764f72cb7078b220ca2713816ed9e41ddf1bd 217.06MB / 478.35MB 28.8s
+#29 sha256:089e57bca418e0b3706393df9c9764f72cb7078b220ca2713816ed9e41ddf1bd 241.17MB / 478.35MB 30.7s
+#29 ...
+
+#40 [snuba-cleanup-self-hosted-local 4/5] RUN apt-get update && apt-get install -y --no-install-recommends cron &&     rm -r /var/lib/apt/lists/*
+#40 25.39 0 upgraded, 2 newly installed, 0 to remove and 12 not upgraded.
+#40 25.39 Need to get 114 kB of archives.
+#40 25.39 After this operation, 314 kB of additional disk space will be used.
+#40 25.39 Get:1 http://deb.debian.org/debian bullseye/main amd64 sensible-utils all 0.0.14 [14.8 kB]
+#40 25.52 Get:2 http://deb.debian.org/debian bullseye/main amd64 cron amd64 3.0pl1-137 [99.6 kB]
+#40 26.50 debconf: delaying package configuration, since apt-utils is not installed
+#40 26.66 Fetched 114 kB in 1s (161 kB/s)
+#40 26.83 Selecting previously unselected package sensible-utils.
+#40 26.83 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7031 files and directories currently installed.)
+#40 26.85 Preparing to unpack .../sensible-utils_0.0.14_all.deb ...
+#40 26.91 Unpacking sensible-utils (0.0.14) ...
+#40 27.11 Selecting previously unselected package cron.
+#40 27.11 Preparing to unpack .../cron_3.0pl1-137_amd64.deb ...
+#40 27.12 Unpacking cron (3.0pl1-137) ...
+#40 27.32 Setting up sensible-utils (0.0.14) ...
+#40 27.33 Setting up cron (3.0pl1-137) ...
+#40 27.74 Adding group `crontab' (GID 101) ...
+#40 27.82 Done.
+#40 28.19 invoke-rc.d: could not determine current runlevel
+#40 28.29 invoke-rc.d: policy-rc.d denied execution of start.
+#40 DONE 29.8s
+
+#42 [snuba-cleanup-self-hosted-local 5/5] COPY entrypoint.sh /entrypoint.sh
+#42 DONE 0.0s
+
+#29 [clickhouse-self-hosted-local 1/1] FROM docker.io/altinity/clickhouse-server:21.6.1.6734-testing-arm@sha256:9a4516444fef9e0f11ee6b2de716d3b97b36bf05d9cc2d44c4596cfb0584dea6
+#29 ...
+
+#22 [snuba-cleanup-self-hosted-local] exporting to image
+#22 exporting layers 0.0s done
+#22 writing image sha256:ae0a93f91218627b549688f0e88bcd7d02153c69a65a21106fbb7b365e019a51 done
+#22 naming to docker.io/library/snuba-cleanup-self-hosted-local done
+#22 DONE 0.2s
+
+#29 [clickhouse-self-hosted-local 1/1] FROM docker.io/altinity/clickhouse-server:21.6.1.6734-testing-arm@sha256:9a4516444fef9e0f11ee6b2de716d3b97b36bf05d9cc2d44c4596cfb0584dea6
+#29 ...
+
+#24 [sentry-cleanup-self-hosted-local 4/5] RUN apt-get update && apt-get install -y --no-install-recommends cron &&     rm -r /var/lib/apt/lists/*
+#24 20.88 Reading package lists...
+#24 24.80 Reading package lists...
+#24 28.53 Building dependency tree...
+#24 29.24 Reading state information...
+#24 29.85 The following additional packages will be installed:
+#24 29.86   sensible-utils
+#24 29.86 Suggested packages:
+#24 29.86   anacron logrotate checksecurity
+#24 29.86 Recommended packages:
+#24 29.86   default-mta | mail-transport-agent
+#24 30.15 The following NEW packages will be installed:
+#24 30.15   cron sensible-utils
+#24 30.57 0 upgraded, 2 newly installed, 0 to remove and 13 not upgraded.
+#24 30.57 Need to get 114 kB of archives.
+#24 30.57 After this operation, 314 kB of additional disk space will be used.
+#24 30.57 Get:1 http://deb.debian.org/debian bullseye/main amd64 sensible-utils all 0.0.14 [14.8 kB]
+#24 30.70 Get:2 http://deb.debian.org/debian bullseye/main amd64 cron amd64 3.0pl1-137 [99.6 kB]
+#24 31.53 debconf: delaying package configuration, since apt-utils is not installed
+#24 31.68 Fetched 114 kB in 1s (180 kB/s)
+#24 31.86 Selecting previously unselected package sensible-utils.
+#24 31.86 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7031 files and directories currently installed.)
+#24 31.88 Preparing to unpack .../sensible-utils_0.0.14_all.deb ...
+#24 31.89 Unpacking sensible-utils (0.0.14) ...
+#24 32.09 Selecting previously unselected package cron.
+#24 32.09 Preparing to unpack .../cron_3.0pl1-137_amd64.deb ...
+#24 32.10 Unpacking cron (3.0pl1-137) ...
+#24 32.29 Setting up sensible-utils (0.0.14) ...
+#24 32.30 Setting up cron (3.0pl1-137) ...
+#24 32.69 Adding group `crontab' (GID 101) ...
+#24 32.77 Done.
+#24 33.18 invoke-rc.d: could not determine current runlevel
+#24 33.26 invoke-rc.d: policy-rc.d denied execution of start.
+#24 DONE 34.5s
+
+#29 [clickhouse-self-hosted-local 1/1] FROM docker.io/altinity/clickhouse-server:21.6.1.6734-testing-arm@sha256:9a4516444fef9e0f11ee6b2de716d3b97b36bf05d9cc2d44c4596cfb0584dea6
+#29 ...
+
+#43 [sentry-cleanup-self-hosted-local 5/5] COPY entrypoint.sh /entrypoint.sh
+#43 DONE 0.0s
+
+#22 [sentry-cleanup-self-hosted-local] exporting to image
+#22 exporting layers 0.0s done
+#22 writing image sha256:a4a9024a55d336641ff52f86750d7612ea671cb881312cd3a76318d432f49f4a done
+#22 naming to docker.io/library/sentry-cleanup-self-hosted-local done
+#22 DONE 0.2s
+
+#29 [clickhouse-self-hosted-local 1/1] FROM docker.io/altinity/clickhouse-server:21.6.1.6734-testing-arm@sha256:9a4516444fef9e0f11ee6b2de716d3b97b36bf05d9cc2d44c4596cfb0584dea6
+#29 sha256:089e57bca418e0b3706393df9c9764f72cb7078b220ca2713816ed9e41ddf1bd 266.34MB / 478.35MB 32.6s
+#29 sha256:089e57bca418e0b3706393df9c9764f72cb7078b220ca2713816ed9e41ddf1bd 291.50MB / 478.35MB 34.8s
+#29 sha256:089e57bca418e0b3706393df9c9764f72cb7078b220ca2713816ed9e41ddf1bd 315.62MB / 478.35MB 37.3s
+#29 sha256:089e57bca418e0b3706393df9c9764f72cb7078b220ca2713816ed9e41ddf1bd 340.79MB / 478.35MB 39.3s
+#29 sha256:089e57bca418e0b3706393df9c9764f72cb7078b220ca2713816ed9e41ddf1bd 364.90MB / 478.35MB 41.1s
+#29 sha256:089e57bca418e0b3706393df9c9764f72cb7078b220ca2713816ed9e41ddf1bd 389.02MB / 478.35MB 43.0s
+#29 sha256:089e57bca418e0b3706393df9c9764f72cb7078b220ca2713816ed9e41ddf1bd 413.14MB / 478.35MB 45.2s
+#29 sha256:089e57bca418e0b3706393df9c9764f72cb7078b220ca2713816ed9e41ddf1bd 438.30MB / 478.35MB 47.2s
+#29 sha256:089e57bca418e0b3706393df9c9764f72cb7078b220ca2713816ed9e41ddf1bd 462.42MB / 478.35MB 49.1s
+#29 sha256:089e57bca418e0b3706393df9c9764f72cb7078b220ca2713816ed9e41ddf1bd 478.35MB / 478.35MB 50.4s done
+#29 extracting sha256:089e57bca418e0b3706393df9c9764f72cb7078b220ca2713816ed9e41ddf1bd
+#29 extracting sha256:089e57bca418e0b3706393df9c9764f72cb7078b220ca2713816ed9e41ddf1bd 5.1s
+#29 extracting sha256:089e57bca418e0b3706393df9c9764f72cb7078b220ca2713816ed9e41ddf1bd 10.1s
+#29 extracting sha256:089e57bca418e0b3706393df9c9764f72cb7078b220ca2713816ed9e41ddf1bd 15.1s
+#29 extracting sha256:089e57bca418e0b3706393df9c9764f72cb7078b220ca2713816ed9e41ddf1bd 15.5s done
+#29 extracting sha256:4355e54f3dcc7f4d1b436cd0ff0249c00965d669188907892159bfd8b051521e
+#29 extracting sha256:4355e54f3dcc7f4d1b436cd0ff0249c00965d669188907892159bfd8b051521e 0.1s done
+#29 extracting sha256:c8706efe3e978f18d75238d7ec01db9d92a5212dc1d5bcfda6dd79fd246aebca done
+#29 extracting sha256:9fc4409d6bfbec739fdc8453926e1766f3af7a563b3bad867130266ede019e8a done
+#29 extracting sha256:a2e34557e26ccbe9d82608e111b5290ddd46e4212378c2d7e23ab3a0a327948e
+#29 extracting sha256:a2e34557e26ccbe9d82608e111b5290ddd46e4212378c2d7e23ab3a0a327948e done
+#29 DONE 66.7s
+
+#22 [clickhouse-self-hosted-local] exporting to image
+#22 exporting layers done
+#22 writing image sha256:74114ee4566dcca9906a2d4442990eef4af07d3c7f973f46d0ea605503dadce2 done
+#22 naming to docker.io/library/clickhouse-self-hosted-local done
+#22 DONE 0.2s
+
+#38 [symbolicator-cleanup-self-hosted-local 1/5] FROM docker.io/getsentry/symbolicator:0.5.1@sha256:34c9db97a7aecb40530cbe53b02a924619df3f5af8314a183c06cafa7e355a99
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+
+Docker images built.
+
+▶ Setting up Zookeeper ...
+
+▶ Downloading and installing wal2json ...
+Unable to find image 'curlimages/curl:7.77.0' locally
+7.77.0: Pulling from curlimages/curl
+d2f70382dc9a: Pulling fs layer
+a299e4ec51ed: Pulling fs layer
+8696c78a6745: Pulling fs layer
+6cbeb3b8d858: Pulling fs layer
+15dfe6483187: Pulling fs layer
+74adfbedd950: Pulling fs layer
+130e5bdc7baf: Pulling fs layer
+433fc2af1da7: Pulling fs layer
+110e7f874674: Pulling fs layer
+74adfbedd950: Waiting
+130e5bdc7baf: Waiting
+6cbeb3b8d858: Waiting
+433fc2af1da7: Waiting
+110e7f874674: Waiting
+15dfe6483187: Waiting
+8696c78a6745: Download complete
+a299e4ec51ed: Verifying Checksum
+a299e4ec51ed: Download complete
+d2f70382dc9a: Verifying Checksum
+d2f70382dc9a: Pull complete
+a299e4ec51ed: Pull complete
+8696c78a6745: Pull complete
+6cbeb3b8d858: Download complete
+6cbeb3b8d858: Pull complete
+15dfe6483187: Verifying Checksum
+15dfe6483187: Download complete
+74adfbedd950: Verifying Checksum
+74adfbedd950: Download complete
+15dfe6483187: Pull complete
+74adfbedd950: Pull complete
+130e5bdc7baf: Verifying Checksum
+130e5bdc7baf: Download complete
+110e7f874674: Verifying Checksum
+110e7f874674: Download complete
+130e5bdc7baf: Pull complete
+433fc2af1da7: Download complete
+433fc2af1da7: Pull complete
+110e7f874674: Pull complete
+Digest: sha256:6e0a786e3e5181df00eaf3a0a1749c18a6bb20b01c9bd192ea72176ce8a1c94b
+Status: Downloaded newer image for curlimages/curl:7.77.0
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  5417  100  5417    0     0  19562      0 --:--:-- --:--:-- --:--:-- 19555
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100     9  100     9    0     0     41      0 --:--:-- --:--:-- --:--:--    41
+
+▶ Bootstrapping and migrating Snuba ...
+Container sentry-self-hosted-clickhouse-1  Creating
+Container sentry-self-hosted-zookeeper-1  Creating
+Container sentry-self-hosted-redis-1  Creating
+Container sentry-self-hosted-redis-1  Created
+Container sentry-self-hosted-zookeeper-1  Created
+Container sentry-self-hosted-kafka-1  Creating
+Container sentry-self-hosted-clickhouse-1  Created
+Container sentry-self-hosted-kafka-1  Created
+Container sentry-self-hosted-redis-1  Starting
+Container sentry-self-hosted-zookeeper-1  Starting
+Container sentry-self-hosted-clickhouse-1  Starting
+Container sentry-self-hosted-redis-1  Started
+Container sentry-self-hosted-clickhouse-1  Started
+Container sentry-self-hosted-zookeeper-1  Started
+Container sentry-self-hosted-zookeeper-1  Waiting
+Container sentry-self-hosted-zookeeper-1  Healthy
+Container sentry-self-hosted-kafka-1  Starting
+Container sentry-self-hosted-kafka-1  Started
+container for service "kafka" is unhealthy
+Error in bootstrap-snuba.sh:3.
+'$dcr snuba-api bootstrap --no-migrate --force' exited with status 1
+-> ./install.sh:main:33
+--> bootstrap-snuba.sh:source:3
+
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+Event dispatched: a979dce3-92bc-4fb9-8db7-361600ea33fd
+Cleaning up...
